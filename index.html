@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MATIC — The First Dental 3D Printer Made in Iraq</title>
+  <meta name="description" content="MATIC builds chairside resin 3D printers for dental clinics in Iraq. Print a permanent crown in 18 minutes, with local support and a compact footprint." />
+  <meta name="theme-color" content="#050505" />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta property="og:title" content="MATIC — The First Dental 3D Printer Made in Iraq" />
+  <meta property="og:description" content="Chairside resin 3D printing for Iraqi dental clinics. Concept website." />
+  <meta property="og:image" content="https://yousif99u1234-hue.github.io/matic-website/assets/video/matic-motion-poster.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/logo-mark.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Inter:opsz,wght@14..32,400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ───────────── HEADER / HUD ───────────── -->
+  <header class="hud">
+    <a href="#top" class="hud__logo" aria-label="MATIC home">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#matic-mark"/></svg>
+      <span class="hud__word">MATIC</span>
+    </a>
+    <div class="hud__meta">
+      <div class="mono hud__clock">IRAQ, <span id="clock" class="dim">00:00:00</span></div>
+      <nav class="hud__nav mono" aria-label="Primary">
+        <a href="#problem">Problem</a>
+        <a href="#product">Product</a>
+        <a href="#catalog">Catalog</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#clinics">Clinics</a>
+        <a href="#academy">Academy</a>
+      </nav>
+    </div>
+    <div class="hud__bars" id="bars" aria-hidden="true"></div>
+    <a href="#contact" class="btn btn--hud mono">Contact us</a>
+    <button class="hud__burger mono" id="burger" aria-expanded="false" aria-controls="mobileNav">Menu</button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <a href="#problem">Problem</a>
+    <a href="#product">Product</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#clinics">Clinics</a>
+    <a href="#academy">Academy</a>
+    <a href="#contact" class="accent">Contact us</a>
+  </nav>
+
+  <div class="coords mono" aria-hidden="true"><span id="cx">X: 0</span><span id="cy">Y: 0</span></div>
+
+  <main id="top">
+    <!-- ───────────── HERO ───────────── -->
+    <section class="hero" aria-labelledby="hero-title">
+      <pre class="hero__log mono" aria-hidden="true">//
+UNIT MATIC-01 — STATUS: <span class="accent">PRINTING</span>
+  JOB: PERMANENT CROWN #26
+  LAYER <span id="layer">0001</span> / 0960
+  RESIN TEMP 30.0°C — UV ENGINE ON
+};
+ORIGIN — MADE IN IRAQ</pre>
+
+      <div class="hero__stage media" aria-hidden="true">
+        <img class="photo" src="assets/photos/hero.jpg" alt="" loading="eager" /><span class="photo-tag mono">REC &#9679; MATIC-01 / build plate with printed crowns</span>
+        <svg class="printer" viewBox="0 0 600 720"><use href="#printer"/></svg>
+        <div class="reticle reticle--a"></div>
+        <div class="reticle reticle--b"></div>
+      </div>
+
+      <h1 id="hero-title" class="hero__title display">
+        MATIC is the first dental 3D printer made in Iraq
+      </h1>
+
+      <div class="hero__aside mono">
+        <span class="tag"><span>Made in</span><b>Iraq</b></span>
+        <p>Built by dentists, for dentists. Chairside resin printing designed, built and supported in Iraq.</p>
+        <a href="#specs" class="scroll-cue">Scroll <i>↓</i></a>
+      </div>
+    </section>
+
+    <!-- ───────────── PINNED SPECS ───────────── -->
+    <section class="specs" id="specs" aria-label="Key figures">
+      <div class="specs__sticky">
+        <div class="dial" aria-hidden="true">
+          <svg viewBox="0 0 600 600" class="dial__ring" id="dialRing"></svg>
+          <span class="dial__needle"></span>
+        </div>
+
+        <div class="specs__center">
+          <div class="tag tag--spec mono"><span>Spec: <b id="specIdx">01</b></span><b id="specLabel">Print time</b></div>
+          <div class="specs__num display" id="specNum" aria-live="polite">18</div>
+          <span class="specs__unit" id="specUnit">min</span>
+        </div>
+
+        <h2 class="specs__name display" id="specName">Permanent crown</h2>
+        <span class="specs__count display" id="specCount">001</span>
+        <p class="specs__note mono" id="specNote">From design file to a finished permanent crown, printed chairside.</p>
+      </div>
+    </section>
+
+    <!-- ───────────── STATEMENT MARQUEE ───────────── -->
+    <section class="statement" id="problem" aria-labelledby="statement-title">
+      <div class="statement__sticky">
+        <h2 id="statement-title" class="statement__line display">
+          Every imported crown is a patient <span class="target" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 2v12M24 34v12M2 24h12M34 24h12"/></svg></span> waiting
+        </h2>
+        <div class="statement__notes">
+          <p class="mono">Clinics in Iraq depend on outside labs and imported machines. Restorations take days, parts take weeks, and support sits in another time zone.</p>
+          <p class="mono">MATIC moves production into the clinic: one compact printer, local resin workflows, and an engineering team a phone call away.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── PRODUCT / FEATURES ───────────── -->
+    <section class="product" id="product" aria-labelledby="product-title">
+      <div class="product__sticky">
+        <div class="product__head">
+          <div class="tag mono"><span>Printer</span><b>MATIC-01</b></div>
+          <h2 id="product-title" class="display">Iraqi engineering, built for the dental chair</h2>
+        </div>
+
+        <div class="product__visual media" aria-hidden="true">
+          <img class="photo" src="assets/photos/product.jpg" alt="" loading="eager" />
+          <svg class="printer printer--product" viewBox="0 0 600 720"><use href="#printer"/></svg>
+          <span class="callout callout--1 mono"><i></i>Z-axis tower</span>
+          <span class="callout callout--2 mono"><i></i>Build platform</span>
+          <span class="callout callout--3 mono"><i></i>Resin vat</span>
+          <span class="callout callout--4 mono"><i></i>Light engine</span>
+        </div>
+
+        <div class="feature-cards" id="featureCards">
+          <article class="fcard is-active">
+            <h3><span class="accent">A.</span> Chairside speed</h3>
+            <p class="mono">A permanent crown printed in 18 minutes, so the patient can leave with the final restoration the same visit.</p>
+          </article>
+          <article class="fcard">
+            <h3><span class="accent">B.</span> Local support</h3>
+            <p class="mono">Setup, training, spare parts and service handled in Iraq by the team that built the machine. No overseas tickets.</p>
+          </article>
+          <article class="fcard">
+            <h3><span class="accent">C.</span> Compact footprint</h3>
+            <p class="mono">Sized for a clinic counter, not a lab floor. Fits next to the scanner and works on standard power.</p>
+          </article>
+          <article class="fcard">
+            <h3><span class="accent">D.</span> Made in Iraq</h3>
+            <p class="mono">Over two years of research and development in Iraq, from the mechanics to the print workflow.</p>
+          </article>
+        </div>
+        <div class="feature-progress mono" aria-hidden="true"><span id="featIdx">01</span> / 04</div>
+      </div>
+    </section>
+
+    <!-- ───────────── CATALOG ───────────── -->
+    <section class="catalog" id="catalog" aria-labelledby="catalog-title">
+      <div class="catalog__head">
+        <span class="kicker mono">[ Catalog ]</span>
+        <h2 id="catalog-title" class="display">Product catalog</h2>
+        <p class="mono dim">One printer, many indications. Detailed specification sheet available on request.</p>
+      </div>
+
+      <!-- Flagship -->
+      <article class="flagship">
+        <div class="flagship__index display">01</div>
+        <div class="flagship__visual media">
+          <img class="photo" src="assets/photos/catalog.jpg" alt="MATIC-01 dental 3D printer" loading="eager" />
+          <svg class="printer" aria-hidden="true" viewBox="0 0 600 720"><use href="#printer"/></svg>
+          <span class="flagship__badge mono">Flagship</span>
+        </div>
+        <div class="flagship__body">
+          <div class="tag mono"><span>Resin printer</span><b>MATIC-01</b></div>
+          <h3 class="display">MATIC-01 Dental 3D Printer</h3>
+          <p class="mono dim">A chairside resin printer engineered in Iraq for crowns, models, guides and appliances.</p>
+
+          <dl class="spec-table mono">
+            <div><dt>Technology</dt><dd>Resin (vat photopolymer)</dd></div>
+            <div><dt>Permanent crown</dt><dd>18 min</dd></div>
+            <div><dt>Light source</dt><dd class="tbc">On request</dd></div>
+            <div><dt>Build volume</dt><dd class="tbc">On request</dd></div>
+            <div><dt>XY resolution</dt><dd class="tbc">On request</dd></div>
+            <div><dt>Layer thickness</dt><dd class="tbc">On request</dd></div>
+            <div><dt>Connectivity</dt><dd class="tbc">On request</dd></div>
+            <div><dt>Support</dt><dd>On-site, Iraq</dd></div>
+            <div><dt>Origin</dt><dd>Made in Iraq</dd></div>
+          </dl>
+
+          <div class="flagship__cta">
+            <a class="btn btn--solid mono" href="#contact" data-product="MATIC-01 Dental 3D Printer">Request a quote</a>
+            <a class="btn mono" href="#contact" data-product="MATIC-01 demo">Book a demo</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Applications -->
+      <div class="apps__head">
+        <span class="kicker mono">[ Applications ]</span>
+        <div class="filters mono" role="tablist" aria-label="Filter applications">
+          <button class="is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button data-filter="restorative" role="tab" aria-selected="false">Restorative</button>
+          <button data-filter="ortho" role="tab" aria-selected="false">Ortho</button>
+          <button data-filter="surgical" role="tab" aria-selected="false">Surgical</button>
+        </div>
+      </div>
+
+      <div class="apps" id="apps">
+        <article class="app" data-cat="restorative">
+          <header class="mono"><span>A-01</span><span>Restorative</span></header>
+          <svg viewBox="0 0 120 120" class="app__icon" aria-hidden="true"><path d="M30 34c0-10 10-16 20-14 6 1 8 4 10 4s4-3 10-4c10-2 20 4 20 14 0 14-6 22-8 34-2 12-4 30-10 30-5 0-6-18-12-18s-7 18-12 18c-6 0-8-18-10-30-2-12-8-20-8-34z"/><path class="hl" d="M38 36h44" /></svg>
+          <h3>Permanent crowns</h3>
+          <p class="mono dim">Final single-unit restorations, chairside in about 18 minutes.</p>
+        </article>
+        <article class="app" data-cat="restorative">
+          <header class="mono"><span>A-02</span><span>Restorative</span></header>
+          <svg viewBox="0 0 120 120" class="app__icon" aria-hidden="true"><path d="M18 40c0-8 8-12 14-10 4 1 5 3 7 3s3-2 7-3c6-2 14 2 14 10 0 10-4 16-6 25s-3 21-7 21-4-13-8-13-5 13-8 13c-4 0-5-12-7-21s-6-15-6-25z"/><path d="M60 40c0-8 8-12 14-10 4 1 5 3 7 3s3-2 7-3c6-2 14 2 14 10 0 10-4 16-6 25s-3 21-7 21-4-13-8-13-5 13-8 13c-4 0-5-12-7-21s-6-15-6-25z"/><path class="hl" d="M50 46h20"/></svg>
+          <h3>Temporary crowns &amp; bridges</h3>
+          <p class="mono dim">Provisionals printed while the patient is still in the chair.</p>
+        </article>
+        <article class="app" data-cat="restorative">
+          <header class="mono"><span>A-03</span><span>Restorative</span></header>
+          <svg viewBox="0 0 120 120" class="app__icon" aria-hidden="true"><path d="M26 44c0-10 12-16 22-12 5 2 8 4 12 4s7-2 12-4c10-4 22 2 22 12 0 16-6 26-10 38-3 9-6 18-12 18-5 0-6-12-12-12s-7 12-12 12c-6 0-9-9-12-18-4-12-10-22-10-38z"/><path class="hl" d="M40 50h40v16H40z"/></svg>
+          <h3>Inlays &amp; onlays</h3>
+          <p class="mono dim">Partial indirect restorations printed in the clinic.</p>
+        </article>
+        <article class="app" data-cat="restorative ortho">
+          <header class="mono"><span>A-04</span><span>Models</span></header>
+          <svg viewBox="0 0 120 120" class="app__icon" aria-hidden="true"><path d="M16 78c0-30 20-50 44-50s44 20 44 50"/><path d="M28 78c0-22 14-38 32-38s32 16 32 38"/><path d="M12 78h96v14H12z"/><path class="hl" d="M40 52l6 6M60 44v8M80 52l-6 6"/></svg>
+          <h3>Study &amp; working models</h3>
+          <p class="mono dim">Accurate arches for diagnosis, case presentation and lab work.</p>
+        </article>
+        <article class="app" data-cat="surgical">
+          <header class="mono"><span>A-05</span><span>Surgical</span></header>
+          <svg viewBox="0 0 120 120" class="app__icon" aria-hidden="true"><path d="M16 70c0-24 20-42 44-42s44 18 44 42v10H16z"/><circle class="hl" cx="44" cy="58" r="6"/><circle class="hl" cx="76" cy="58" r="6"/><path class="hl" d="M44 40v12M76 40v12"/></svg>
+          <h3>Surgical guides</h3>
+          <p class="mono dim">Implant guides from the clinic's own planning files.</p>
+        </article>
+        <article class="app" data-cat="ortho">
+          <header class="mono"><span>A-06</span><span>Ortho</span></header>
+          <svg viewBox="0 0 120 120" class="app__icon" aria-hidden="true"><path d="M14 74c0-26 20-44 46-44s46 18 46 44"/><path d="M24 74c0-20 16-34 36-34s36 14 36 34"/><path class="hl" d="M14 74h10M96 74h10"/></svg>
+          <h3>Night guards &amp; splints</h3>
+          <p class="mono dim">Occlusal appliances printed in-house instead of outsourced.</p>
+        </article>
+        <article class="app" data-cat="ortho">
+          <header class="mono"><span>A-07</span><span>Ortho</span></header>
+          <svg viewBox="0 0 120 120" class="app__icon" aria-hidden="true"><path d="M18 76c0-24 18-40 42-40s42 16 42 40"/><path class="hl" d="M30 62c8 6 18 9 30 9s22-3 30-9"/><path d="M18 76h84"/></svg>
+          <h3>Retainers &amp; aligner models</h3>
+          <p class="mono dim">Models for thermoformed retainers and clear aligner workflows.</p>
+        </article>
+        <a class="app app--ask" href="#contact" data-cat="restorative ortho surgical" data-cursor="Ask">
+          <header class="mono"><span>A-08</span><span>Custom</span></header>
+          <span class="app__plus display">+</span>
+          <h3>Another indication?</h3>
+          <p class="mono dim">Tell us what your clinic prints and we will set up the protocol.</p>
+        </a>
+      </div>
+
+      <!-- Packages -->
+      <div class="packages">
+        <article class="pkg">
+          <span class="kicker mono">[ 02 ]</span>
+          <h3 class="display">Starter kit</h3>
+          <ul class="mono">
+            <li>MATIC-01 printer</li>
+            <li>Resin vat &amp; build platform</li>
+            <li>Post-processing essentials</li>
+            <li>On-site installation</li>
+          </ul>
+        </article>
+        <article class="pkg">
+          <span class="kicker mono">[ 03 ]</span>
+          <h3 class="display">Training</h3>
+          <ul class="mono">
+            <li>Chairside workflow session</li>
+            <li>Crown &amp; model print protocols</li>
+            <li>Arabic &amp; English material</li>
+            <li>Follow-up with MATIC team</li>
+          </ul>
+        </article>
+        <article class="pkg">
+          <span class="kicker mono">[ 04 ]</span>
+          <h3 class="display">Care &amp; service</h3>
+          <ul class="mono">
+            <li>Local technical support</li>
+            <li>Spare parts in Iraq</li>
+            <li>Maintenance visits</li>
+            <li>Firmware &amp; workflow updates</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────── COMPARISON ───────────── -->
+    <section class="compare" id="workflow" aria-labelledby="compare-title">
+      <div class="compare__left">
+        <h2 id="compare-title" class="display">Treat faster: print the crown, not the order form</h2>
+        <span class="tag tag--red mono">Turnaround for one permanent crown</span>
+
+        <ul class="bars-list">
+          <li class="is-hot">
+            <div class="bars-list__row"><span>MATIC chairside</span><span class="display">18 min</span></div>
+            <div class="meter" style="--w:6%"></div>
+          </li>
+          <li>
+            <div class="bars-list__row"><span>Local external lab</span><span class="display">Days</span></div>
+            <div class="meter" style="--w:48%"></div>
+          </li>
+          <li>
+            <div class="bars-list__row"><span>Lab abroad</span><span class="display">Weeks</span></div>
+            <div class="meter" style="--w:100%"></div>
+          </li>
+        </ul>
+        <p class="mono dim small">Lab turnaround varies by clinic and city. MATIC figure from MATIC's published chairside demonstration.</p>
+      </div>
+
+      <div class="compare__right">
+        <p class="mono dim col-note">Modern dentistry is moving to digital, same-day care. Clinics that print in-house control their own schedule, materials and cost.</p>
+        <p class="mono dim col-note">With a local manufacturer, downtime is measured in hours, not shipping weeks.</p>
+
+        <ol class="steps">
+          <li><span class="mono">01</span><div><h3>Scan</h3><p class="mono dim">Intraoral scan in the chair.</p></div></li>
+          <li><span class="mono">02</span><div><h3>Design</h3><p class="mono dim">Design the restoration in your CAD software.</p></div></li>
+          <li><span class="mono">03</span><div><h3>Print</h3><p class="mono dim">Send the file to MATIC-01. Crown ready in ~18 minutes.</p></div></li>
+          <li><span class="mono">04</span><div><h3>Finish &amp; seat</h3><p class="mono dim">Wash, cure, polish and seat the same visit.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ───────────── NUMBERS BAND ───────────── -->
+    <section class="band" aria-label="MATIC in numbers">
+      <div class="band__item"><span class="display" data-count="2" data-suffix="+">0</span><p class="mono">Years of R&amp;D in Iraq</p></div>
+      <div class="band__item"><span class="display" data-count="18">0</span><p class="mono">Minutes per permanent crown</p></div>
+      <div class="band__item"><span class="display" data-count="100" data-suffix="+">0</span><p class="mono">Printers in Iraqi clinics &amp; centers</p></div>
+      <div class="band__item"><span class="display">1<sup>st</sup></span><p class="mono">Iraqi-made 3D printer</p></div>
+    </section>
+
+    <!-- ───────────── LAYER BY LAYER ───────────── -->
+    <section class="layers" id="layers" aria-labelledby="layers-title">
+      <div class="layers__sticky">
+        <div class="layers__copy">
+          <span class="kicker mono">[ Print process ]</span>
+          <h2 id="layers-title" class="display">Watch a crown grow, layer by layer</h2>
+          <p class="mono dim">Scroll to run a print. The build platform lifts out of the resin as each layer cures under the light engine.</p>
+          <ol class="layers__stages mono" id="layerStages">
+            <li data-at="0"><span>01</span>Platform down, resin settles</li>
+            <li data-at=".18"><span>02</span>Base layers cure</li>
+            <li data-at=".45"><span>03</span>Crown body builds</li>
+            <li data-at=".78"><span>04</span>Occlusal detail and cusps</li>
+            <li data-at=".98"><span>05</span>Print complete</li>
+          </ol>
+        </div>
+
+        <div class="layers__stage" aria-hidden="true">
+          <canvas id="layerCanvas" width="900" height="900"></canvas>
+          <span class="layers__corner c1"></span><span class="layers__corner c2"></span><span class="layers__corner c3"></span><span class="layers__corner c4"></span>
+        </div>
+
+        <div class="layers__readout">
+          <div><span class="mono dim">Layer</span><b class="display" id="layerNum">0000</b><span class="mono dim">/ 0960</span></div>
+          <div><span class="mono dim">Elapsed</span><b class="display" id="layerTime">00:00</b><span class="mono dim">/ 18:00 min</span></div>
+          <div class="layers__bar"><i id="layerBar"></i></div>
+          <span class="mono dim small">Illustration. Print time from MATIC's published 18-minute permanent crown demo.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── FIELD GALLERY ───────────── -->
+    <section class="gallery" id="field" aria-labelledby="field-title">
+      <div class="field__sticky">
+        <div class="field__head">
+          <span class="kicker mono">[ In the field ]</span>
+          <h2 id="field-title" class="display">From the booth to the dental chair</h2>
+          <span class="field__count mono"><b id="fieldIdx">01</b> / 05</span>
+        </div>
+        <div class="field__track" id="fieldTrack">
+          <figure class="shot shot--tall">
+            <img src="assets/photos/field-haykel.jpg" alt="Dr. Mohammed Haykel in his clinic next to a MATIC printer" loading="eager" />
+            <figcaption class="mono"><span class="accent">F-01</span> Dr. Mohammed Haykel &mdash; Haykel Clinic. Six months with MATIC: surgical guides, permanent crowns and clear aligners.</figcaption>
+          </figure>
+          <figure class="shot ">
+            <img src="assets/photos/field-booth.jpg" alt="MATIC printers on display at the MATIC booth" loading="eager" />
+            <figcaption class="mono"><span class="accent">F-02</span> MATIC booth, Iraq Second Dental Festival. Built by dentists, for dentists.</figcaption>
+          </figure>
+          <figure class="shot shot--tall">
+            <img src="assets/photos/field-clinic.jpg" alt="A MATIC printer installed in a clinic office" loading="eager" />
+            <figcaption class="mono"><span class="accent">F-03</span> Welcoming Dr. Hazar Mustafa to the MATIC user network.</figcaption>
+          </figure>
+          <figure class="shot ">
+            <img src="assets/photos/field-crowd.jpg" alt="Dentists gathered around a MATIC printer demo" loading="eager" />
+            <figcaption class="mono"><span class="accent">F-04</span> Live demos at the booth. Dentists see the printer working, not a brochure.</figcaption>
+          </figure>
+          <figure class="shot shot--tall">
+            <img src="assets/photos/field-festival.jpg" alt="MATIC interviewed at the Iraq Second Dental Festival" loading="eager" />
+            <figcaption class="mono"><span class="accent">F-05</span> MATIC on camera at the Iraq Second Dental Festival.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ───────────── CLINICS / EVENTS ───────────── -->
+    <section class="clinics" id="clinics" aria-labelledby="clinics-title">
+      <div class="clinics__head">
+        <span class="kicker mono">[ Clinics ]</span>
+        <h2 id="clinics-title" class="display">100+ printers in Iraqi clinics</h2>
+      </div>
+
+      <div class="doctors">
+        <a class="doc" href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener"><span class="mono">U-01</span><b>Dr. Mohammed Haykel</b><i class="mono">Haykel Clinic &rarr;</i></a>
+        <a class="doc" href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener"><span class="mono">U-02</span><b>Dr. Hazar Mustafa</b><i class="mono">MATIC user &rarr;</i></a>
+        <a class="doc" href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener"><span class="mono">U-03</span><b>Dr. Ghaith Diaa</b><i class="mono">MATIC user &rarr;</i></a>
+        <a class="doc" href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener"><span class="mono">U-04</span><b>Dr. Omer</b><i class="mono">MATIC user &rarr;</i></a>
+        <a class="doc" href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener"><span class="mono">U-05</span><b>Dr. Ali Thiab</b><i class="mono">MATIC user &rarr;</i></a>
+        <a class="doc" href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener"><span class="mono">U-06</span><b>Dr. Hamza</b><i class="mono">MATIC user &rarr;</i></a>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="mono accent">JUL 2025</span>
+          <h3>Launch</h3>
+          <p class="mono dim">MATIC introduced as the first Iraqi-made dental 3D printer.</p>
+        </div>
+        <div class="timeline__item">
+          <span class="mono accent">OCT 2025</span>
+          <h3>Chairside demo</h3>
+          <p class="mono dim">Step-by-step permanent crown printed in 18 minutes.</p>
+        </div>
+        <div class="timeline__item">
+          <span class="mono accent">2026</span>
+          <h3>Al-Mashreq University</h3>
+          <p class="mono dim">Digital Dentistry lecture for the next generation of dentists.</p>
+        </div>
+        <div class="timeline__item">
+          <span class="mono accent">2026</span>
+          <h3>100+ printers</h3>
+          <p class="mono dim">More than one hundred MATIC printers running in clinics and centers across Iraq.</p>
+        </div>
+        <div class="timeline__item">
+          <span class="mono accent">2026</span>
+          <h3>IQIDS &amp; LEAP</h3>
+          <p class="mono dim">Exhibited at regional dental and technology shows.</p>
+        </div>
+        <div class="timeline__item">
+          <span class="mono accent">NOV 2026</span>
+          <h3>Iraq Dental Festival II</h3>
+          <p class="mono dim">Booth and demos at the Iraqi Dental Syndicate headquarters.</p>
+        </div>
+      </div>
+
+      <blockquote class="founder">
+        <p class="display">“What we make with our own hands, we trust more.”</p>
+        <footer class="mono">MATIC <span class="dim">— Founded by Dr. Bashar Al-Nourji</span></footer>
+      </blockquote>
+    </section>
+
+    <!-- ───────────── ACADEMY ───────────── -->
+    <section class="academy" id="academy" aria-labelledby="academy-title">
+      <div class="academy__head">
+        <span class="kicker mono">[ MATIC Academy ]</span>
+        <h2 id="academy-title" class="display">More than a printer: a way into digital dentistry</h2>
+        <p class="mono dim">MATIC's goal is not just to sell printers. It is to make digital dentistry part of everyday practice in Iraq, one clinic at a time.</p>
+      </div>
+
+      <div class="academy__grid">
+        <a class="acard" href="https://docs.google.com/forms/d/e/1FAIpQLScCdgK0DbEgdxjDHsGng812qRNN-0fW2VS-qgxosYFeYDZxcQ/viewform" target="_blank" rel="noopener" data-cursor="Register ↗">
+          <header class="mono"><span class="accent">01</span><span>Workshops</span></header>
+          <h3>Hands-on workshops</h3>
+          <p class="mono dim">Try the full workflow with your own hands before you invest. Small groups, real prints, run by the MATIC team.</p>
+          <span class="acard__cta mono">Register for a workshop ↗</span>
+        </a>
+        <article class="acard">
+          <header class="mono"><span class="accent">02</span><span>Lectures</span></header>
+          <h3>University &amp; festival talks</h3>
+          <p class="mono dim">Introductory Digital Dentistry lectures, including at Al-Mashreq University, plus live talks at the Iraq Dental Festival.</p>
+          <span class="acard__cta mono dim">Next generation of dentists</span>
+        </article>
+        <article class="acard">
+          <header class="mono"><span class="accent">03</span><span>Research</span></header>
+          <h3>Sherlock Journals</h3>
+          <p class="mono dim">A tool for researcher dentists on the MATIC platform: find the right scientific journal for your paper by field, need and budget.</p>
+          <span class="acard__cta mono dim">For researcher dentists</span>
+        </article>
+        <a class="acard" href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener" data-cursor="Watch ↗">
+          <header class="mono"><span class="accent">04</span><span>Series</span></header>
+          <h3>Digital Dentistry, explained</h3>
+          <p class="mono dim">What digital dentistry is, the key terms, where to start and how to make the investment pay back, in short videos.</p>
+          <span class="acard__cta mono">Watch on Instagram ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ───────────── FAQ ───────────── -->
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="faq__head">
+        <span class="kicker mono">[ FAQ ]</span>
+        <h2 id="faq-title" class="display">Questions dentists ask us</h2>
+        <p class="mono dim">Collected from the questions we get most on Instagram and at our booth.</p>
+      </div>
+      <div class="faq__list">
+        <details class="qa" open>
+          <summary><span class="mono accent">Q-01</span><b>How much does MATIC-01 cost?</b><i aria-hidden="true"></i></summary>
+          <p class="mono dim">Pricing depends on the package: printer, training and service plan. Send a quote request and the team replies on WhatsApp with current pricing and availability.</p>
+        </details>
+        <details class="qa">
+          <summary><span class="mono accent">Q-02</span><b>Is it really made in Iraq?</b><i aria-hidden="true"></i></summary>
+          <p class="mono dim">Yes. MATIC-01 is designed and built in Iraq by the MATIC team after more than two years of R&amp;D. Ask us for a walkthrough of how it is made.</p>
+        </details>
+        <details class="qa">
+          <summary><span class="mono accent">Q-03</span><b>How fast is a permanent crown?</b><i aria-hidden="true"></i></summary>
+          <p class="mono dim">MATIC's published chairside demo prints a permanent crown in about 18 minutes, so the patient can leave with the final restoration the same visit.</p>
+        </details>
+        <details class="qa">
+          <summary><span class="mono accent">Q-04</span><b>What can I print with it?</b><i aria-hidden="true"></i></summary>
+          <p class="mono dim">Permanent and temporary crowns, inlays and onlays, study models, surgical guides, night guards, and models for retainers and clear aligners.</p>
+        </details>
+        <details class="qa">
+          <summary><span class="mono accent">Q-05</span><b>Who installs it and who fixes it?</b><i aria-hidden="true"></i></summary>
+          <p class="mono dim">The MATIC team in Iraq handles installation, training, spare parts and service. No overseas tickets and no waiting on shipping.</p>
+        </details>
+        <details class="qa">
+          <summary><span class="mono accent">Q-06</span><b>I'm new to digital dentistry. Where do I start?</b><i aria-hidden="true"></i></summary>
+          <p class="mono dim">Join a hands-on workshop first. You will scan, design and print with the team before deciding anything.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ───────────── FILM ───────────── -->
+    <section class="film" id="film" aria-labelledby="film-title">
+      <div class="film__head">
+        <span class="kicker mono">[ Film ]</span>
+        <h2 id="film-title" class="display">MATIC in 32 seconds</h2>
+        <a class="mono film__dl" href="assets/video/matic-motion-9x16.mp4" download data-cursor="Save ↓">Vertical cut for Reels ↓</a>
+      </div>
+      <div class="film__frame" id="filmFrame" data-cursor="Pause">
+        <video id="filmVideo" src="assets/video/matic-motion.mp4" poster="assets/video/matic-motion-poster.jpg" muted loop playsinline preload="metadata"></video>
+        <span class="film__c c1"></span><span class="film__c c2"></span><span class="film__c c3"></span><span class="film__c c4"></span>
+        <div class="film__hud mono"><span><i class="rec"></i>MATIC-01 / Film</span><span id="filmTc">00:00 / 00:32</span></div>
+        <div class="film__progress"><i id="filmBar"></i></div>
+        <button class="film__play mono" id="filmPlay" aria-label="Play film"><span>Play</span></button>
+      </div>
+    </section>
+
+    <!-- ───────────── CALCULATOR ───────────── -->
+    <section class="calc" id="calc" aria-labelledby="calc-title">
+      <div class="calc__copy">
+        <span class="kicker mono">[ Do the math ]</span>
+        <h2 id="calc-title" class="display">What chairside printing changes in your clinic</h2>
+        <p class="mono dim">Move the sliders to match your practice. The numbers update live.</p>
+
+        <label class="slider">
+          <span class="mono">Crowns per month <b id="cPerMonthV">20</b></span>
+          <input type="range" id="cPerMonth" min="1" max="120" value="20" />
+        </label>
+        <label class="slider">
+          <span class="mono">Current lab turnaround <b id="cLabDaysV">7 days</b></span>
+          <input type="range" id="cLabDays" min="1" max="21" value="7" />
+        </label>
+      </div>
+
+      <div class="calc__out">
+        <div class="calc__cell">
+          <span class="mono dim">Second visits avoided / month</span>
+          <b class="display" id="oVisits">20</b>
+          <span class="mono dim small">Crowns seated the same day</span>
+        </div>
+        <div class="calc__cell">
+          <span class="mono dim">Patient waiting removed / month</span>
+          <b class="display" id="oWait">140</b>
+          <span class="mono dim small">Patient-days without a temporary</span>
+        </div>
+        <div class="calc__cell">
+          <span class="mono dim">Printer time / month</span>
+          <b class="display" id="oPrint">6.0<small>h</small></b>
+          <span class="mono dim small">At 18 min per permanent crown</span>
+        </div>
+        <div class="calc__cell calc__cell--wide">
+          <span class="mono dim">Turnaround per crown</span>
+          <div class="calc__bars">
+            <div><span class="mono">Lab</span><i id="oLabBar" style="--w:100%"></i><b class="mono" id="oLabTxt">7 days</b></div>
+            <div class="hot"><span class="mono">MATIC</span><i style="--w:1.2%"></i><b class="mono">18 min</b></div>
+          </div>
+        </div>
+        <p class="mono dim small calc__note">Estimates for illustration only. Design, finishing and cementation add chair time; results vary by case and workflow.</p>
+      </div>
+    </section>
+
+    <!-- ───────────── CONTACT ───────────── -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact__left">
+        <span class="kicker mono">[ Request a quote ]</span>
+        <h2 id="contact-title" class="display">Bring MATIC to your clinic</h2>
+        <p class="mono dim">Tell us about your clinic and we will reply on WhatsApp with pricing, a demo slot and availability.</p>
+        <a class="contact__phone display" href="tel:+9647810112266">0781 011 2266</a>
+      </div>
+
+      <form class="form" id="quoteForm" novalidate>
+        <label class="field"><span class="mono">Name</span><input name="name" required autocomplete="name" /></label>
+        <label class="field"><span class="mono">Clinic / Lab</span><input name="clinic" autocomplete="organization" /></label>
+        <label class="field"><span class="mono">City</span>
+          <select name="city">
+            <option>Baghdad</option><option>Basra</option><option>Erbil</option><option>Mosul</option><option>Najaf</option><option>Karbala</option><option>Sulaymaniyah</option><option>Other</option>
+          </select>
+        </label>
+        <label class="field"><span class="mono">Interested in</span>
+          <select name="product" id="productSelect">
+            <option>MATIC-01 Dental 3D Printer</option>
+            <option>MATIC-01 demo</option>
+            <option>Training</option>
+            <option>Care &amp; service</option>
+          </select>
+        </label>
+        <label class="field field--full"><span class="mono">Message</span><textarea name="message" rows="3"></textarea></label>
+        <button class="btn btn--solid mono" type="submit">Send via WhatsApp →</button>
+        <p class="form__err mono" id="formErr" role="alert"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ───────────── FOOTER ───────────── -->
+  <div class="ticker" aria-hidden="true"><div class="ticker__track display" id="ticker"><div class="ticker__run"><span>Made in Iraq</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>Built by dentists, for dentists</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>18-min crowns</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>100+ printers in Iraq</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>Automatically smarter</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg></div><div class="ticker__run"><span>Made in Iraq</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>Built by dentists, for dentists</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>18-min crowns</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>100+ printers in Iraq</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>Automatically smarter</span><svg viewBox="0 0 64 64"><use href="#matic-mark"/></svg></div></div></div>
+
+  <footer class="footer">
+    <div class="footer__cols">
+      <div>
+        <span class="kicker mono">[ Contact ]</span>
+        <dl class="mono">
+          <div><dt>P:</dt><dd><a href="tel:+9647810112266">+964 781 011 2266</a> <span class="dim">(WhatsApp)</span></dd></div>
+          <div><dt>L:</dt><dd>Iraq</dd></div>
+        </dl>
+      </div>
+      <div>
+        <span class="kicker mono">[ Menu ]</span>
+        <ul class="mono">
+          <li><a href="#problem">Problem</a></li>
+          <li><a href="#product">Product</a></li>
+          <li><a href="#catalog">Catalog</a></li>
+          <li><a href="#workflow">Workflow</a></li>
+          <li><a href="#clinics">Clinics</a></li>
+          <li><a href="#academy">Academy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="kicker mono">[ Social ]</span>
+        <ul class="mono">
+          <li><a href="https://www.instagram.com/matic.iq/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/share/1AtW3nZHas" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.threads.com/@matic.iq" target="_blank" rel="noopener">Threads</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__word" aria-hidden="true"><svg class="footer__mark" viewBox="0 0 64 64"><use href="#matic-mark"/></svg><span>MATIC</span></div>
+    <div class="footer__base mono"><span>© <span id="year">2026</span> MATIC. Made in Iraq.</span><span>Concept website prepared for MATIC — not yet official</span><span>Automatically smarter</span></div>
+  </footer>
+
+  <!-- ───────────── SVG SYMBOLS ───────────── -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="gBody" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#e9e9e9"/><stop offset=".55" stop-color="#bdbdbd"/><stop offset="1" stop-color="#6d6d6d"/>
+      </linearGradient>
+      <linearGradient id="gSide" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#8a8a8a"/><stop offset="1" stop-color="#3b3b3b"/>
+      </linearGradient>
+      <linearGradient id="gMetal" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#5c5c5c"/><stop offset=".35" stop-color="#d8d8d8"/><stop offset=".6" stop-color="#8d8d8d"/><stop offset="1" stop-color="#3a3a3a"/>
+      </linearGradient>
+      <linearGradient id="gUV" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#d23a1e" stop-opacity=".9"/><stop offset="1" stop-color="#d23a1e" stop-opacity="0"/>
+      </linearGradient>
+      <radialGradient id="gGlow" cx=".5" cy=".5" r=".5">
+        <stop offset="0" stop-color="#d23a1e" stop-opacity=".55"/><stop offset="1" stop-color="#d23a1e" stop-opacity="0"/>
+      </radialGradient>
+
+      <symbol id="matic-mark" viewBox="0 0 228.7 256.0"><path style="fill:var(--logo-face,#fff)" d="M2.5 54.4L2.5 200.2L6.6 205.0L93.2 255.0L226.2 178.2L226.2 80.5L222.9 76.6L93.5 1.9Z"/><path style="fill:var(--logo-red,#d23a1e)" fill-rule="evenodd" d="M2.5 54.4L2.5 200.2L6.6 205.0L93.2 255.0L226.2 178.2L226.2 80.5L222.9 76.6L93.5 1.9ZM89.3 205.8L89.3 242.5L57.6 224.2L57.6 187.5ZM217.7 173.4L98.5 242.2L98.5 205.5L217.7 136.7ZM93.8 197.1L62.5 179.1L141.1 133.7L172.3 151.8ZM104.0 111.9L130.8 127.4L104.0 142.9ZM218.1 125.3L186.4 143.6L186.4 107.0L218.1 88.7ZM177.3 107.0L177.3 143.9L104.1 101.6L104.1 64.7ZM95.0 149.1L57.7 170.7L57.7 86.6L95.0 65.0ZM48.7 86.8L48.7 218.4L10.4 196.3L10.4 64.7ZM52.8 35.1L90.3 56.8L53.1 78.3L15.6 56.6ZM94.1 11.4L213.2 80.1L181.4 98.5L62.3 29.7Z"/></symbol>
+
+      <symbol id="printer" viewBox="0 0 600 720">
+        <!-- floor glow -->
+        <ellipse cx="300" cy="660" rx="250" ry="34" fill="url(#gGlow)" class="p-glow"/>
+        <!-- base: top face -->
+        <path d="M96 520 300 452 504 520 300 588z" fill="#d9d9d9"/>
+        <!-- base: left & right faces -->
+        <path d="M96 520 300 588v66L96 586z" fill="url(#gBody)"/>
+        <path d="M504 520 300 588v66l204-68z" fill="url(#gSide)"/>
+        <path d="M96 520 300 588 504 520" fill="none" stroke="#fff" stroke-opacity=".5"/>
+        <!-- red base stripe -->
+        <path d="M120 568 300 628v6L120 574z" fill="#d23a1e"/>
+        <!-- logo on base -->
+        <g transform="translate(184 590) skewY(18) scale(.32)" color="#d23a1e"><use href="#matic-mark" width="64" height="64"/></g>
+        <!-- vat -->
+        <g class="p-vat">
+          <path d="M190 502 300 466 410 502 300 538z" fill="#2a2a2a"/>
+          <path d="M190 502 300 538v18L190 520z" fill="url(#gMetal)"/>
+          <path d="M410 502 300 538v18l110-36z" fill="#4a4a4a"/>
+          <path d="M206 502 300 471 394 502 300 533z" fill="#7a1410" opacity=".85"/>
+          <path d="M206 502 300 471 394 502 300 533z" fill="url(#gUV)" class="p-uv"/>
+        </g>
+        <!-- tower: front & side -->
+        <path d="M392 120 448 102v398l-56 18z" fill="url(#gBody)"/>
+        <path d="M448 102 478 112v398l-30-10z" fill="url(#gSide)"/>
+        <path d="M392 120 448 102 478 112 422 130z" fill="#efefef"/>
+        <!-- rail slot -->
+        <path d="M410 150 430 144v340l-20 6z" fill="#1a1a1a"/>
+        <!-- moving carriage group -->
+        <g class="p-carriage">
+          <!-- arm -->
+          <path d="M226 262 420 198v30L226 292z" fill="#e6e6e6"/>
+          <path d="M226 262 420 198 436 204 242 268z" fill="#fafafa"/>
+          <path d="M226 292 242 298v-30l-16-6z" fill="#9a9a9a"/>
+          <!-- red clamp knobs -->
+          <rect x="300" y="228" width="26" height="26" rx="5" fill="#d23a1e" transform="skewY(-18) translate(0 98)"/>
+          <rect x="246" y="250" width="22" height="22" rx="4" fill="#b81d15" transform="skewY(-18) translate(0 88)"/>
+          <!-- platform hanger -->
+          <path d="M282 288 318 276v40l-36 12z" fill="#cfcfcf"/>
+          <!-- build plate -->
+          <path d="M214 352 300 324 386 352 300 380z" fill="url(#gMetal)"/>
+          <path d="M214 352 300 380v8l-86-28z" fill="#5d5d5d"/>
+          <path d="M386 352 300 380v8l86-28z" fill="#3d3d3d"/>
+          <!-- printed crowns hanging -->
+          <g class="p-parts" fill="#f1ece2">
+            <path d="M262 372c0 10 4 26 9 26s5-8 8-8 4 8 8 8 8-16 8-26z"/>
+            <path d="M306 362c0 10 4 26 9 26s5-8 8-8 4 8 8 8 8-16 8-26z" opacity=".9"/>
+          </g>
+        </g>
+        <!-- scan line -->
+        <line x1="190" x2="410" y1="502" y2="502" stroke="#d23a1e" stroke-width="2" class="p-scan"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="main.js" defer></script>
+  <script src="cursor.js" defer></script>
+  <script src="sections.js" defer></script>
+</body>
+</html>
